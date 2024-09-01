@@ -5,3 +5,8 @@ def separator_string(text=None):
         f"----------------------------#"
     )
     print()
+
+
+def cases_string(case=None):
+    print()
+    print(f"<------ Case: {case} ------>")

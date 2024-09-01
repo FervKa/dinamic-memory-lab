@@ -19,16 +19,13 @@ class Stack_with_Queue:
             while not self.queue_two.empty_queue():
                 self.queue_one.enqueue(self.queue_two.dequeue()[1])
 
-
-
-
     def unstack_stack_with_queue(self):
         if self.is_empty():
             print("The stack is empty!")
             return
         return self.queue_one.dequeue()
 
-    def show_stack_queue(self):
+    def show_stack_queue(self, get_array=False):
         if self.queue_one.empty_queue():
             print("The stack queue is empty!")
             return
@@ -37,4 +34,7 @@ class Stack_with_Queue:
             for x in self.queue_one.show_queue():
                 vector.append(x)
                 
-            print(f"The stack queue is: {vector}\n")
+            if not get_array: 
+                print(f"The stack queue is: {vector}")
+            else:
+                return vector
