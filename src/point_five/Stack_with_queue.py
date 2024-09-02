@@ -33,8 +33,25 @@ class Stack_with_Queue:
             vector = []
             for x in self.queue_one.show_queue():
                 vector.append(x)
-                
+
             if not get_array: 
                 print(f"The stack queue is: {vector}")
             else:
                 return vector
+
+
+# Explicación:
+# La clase Stack_with_Queue utiliza dos colas para implementar una pila.
+# La cola one se utiliza para almacenar los elementos de la pila, y la cola two 
+# se utiliza para almacenar los elementos que se van a agregar a la pila.
+# La función is_empty() verifica si la pila está vacía.
+# La función is_full() verifica si la pila está llena.
+# La función stack() agrega un elemento a la pila. -> Esta verifica en primera instancia si la
+# cola one está vacía, si es así, agrega el elemento a la cola one, 
+# si no, se desplazan todos los elementos de la cola one a la cola two
+# y luego se agrega el elemento a la cola one en la primera posición. Luego,
+# se desplazan todos los elementos de la cola two a la cola one en orden invertido, así, el primer
+# elemento de la cola two es el último elemento de la cola one, por consiguiente, el primer elemento
+# de la cola one es el último elemento agregado a la pila, manteniendo el FIFO de las colas..
+# La función unstack_stack_with_queue() elimina el elemento superior de la pila.
+# La función show_stack_queue() muestra los elementos de la pila.
