@@ -1,14 +1,12 @@
-import random
-
 class Nodo:
     def __init__(self, valor):
         self.valor = valor
         self.siguiente = None
-        
+
 class LSL:
     def __init__(self):
         self.cabecera = None
-        
+
     def insertar(self, valor):
         nuevo_nodo = Nodo(valor)
         if self.cabecera is None:
@@ -18,11 +16,11 @@ class LSL:
             while nodo_actual.siguiente:
                 nodo_actual = nodo_actual.siguiente # Asignas Espacio de memoria
             nodo_actual.siguiente = nuevo_nodo # Reemplazar nuevo nodo en el espacio disponible de memoria           
-    
+
     def intercambio(self, nodo_1, nodo_2):
         nodo_1, nodo_2 = self.get_nodo(nodo_1), self.get_nodo(nodo_2)
         nodo_1.valor, nodo_2.valor = nodo_2.valor, nodo_1.valor
-    
+
     def get_nodo(self, nodo):             
         nodo_actual = self.cabecera
         for i in range(1, self.obtener_tamano()+1):
@@ -31,13 +29,13 @@ class LSL:
             nodo_actual = nodo_actual.siguiente
             
     def obtener_tamano(self):
-            nodo_actual = self.cabecera
-            tamaño = 0
-            while nodo_actual:
-                tamaño += 1
-                nodo_actual = nodo_actual.siguiente
-            return tamaño            
-    
+        nodo_actual = self.cabecera
+        tamaño = 0
+        while nodo_actual:
+            tamaño += 1
+            nodo_actual = nodo_actual.siguiente
+        return tamaño            
+
     def imprimir(self):
         if self.cabecera is None:
             print("La LSL está vacía")
@@ -54,20 +52,20 @@ class LSL:
         nodo_actual2 = lista_2.cabecera
         
         while nodo_actual:
-          lista_3.insertar(nodo_actual.valor)
-          nodo_actual = nodo_actual.siguiente # Primera lista
+            lista_3.insertar(nodo_actual.valor)
+            nodo_actual = nodo_actual.siguiente # Primera lista
         while nodo_actual2:
-          lista_3.insertar(nodo_actual2.valor)
-          nodo_actual2 = nodo_actual2.siguiente # Segunda lista
-      
+            lista_3.insertar(nodo_actual2.valor)
+            nodo_actual2 = nodo_actual2.siguiente # Segunda lista
+
         return lista_3
 
     def ordenar(self):
         if self.cabecera is None or self.cabecera.siguiente is None:
             return
-        
+
         nodo_actual = self.cabecera
-        
+
         while nodo_actual:
             nodo_comparar = nodo_actual.siguiente
             while nodo_comparar:
@@ -75,25 +73,3 @@ class LSL:
                     nodo_actual.valor, nodo_comparar.valor = nodo_comparar.valor, nodo_actual.valor
                 nodo_comparar = nodo_comparar.siguiente
             nodo_actual = nodo_actual.siguiente
-        
-    
-lista_1 = LSL()
-lista_2 = LSL()
-lista_3 = LSL()
-
-for valor in range (0, 20):
-    lista_1.insertar(random.randint(1, 50))
-    lista_2.insertar(random.randint(1, 50))
-
-lista_3 = lista_1.concatenar_listas(lista_2)
-
-print("lista 1")
-lista_1.imprimir()
-print("lista 2")
-lista_2.imprimir()
-print("lista 3")
-lista_3.imprimir()
-
-lista_3.ordenar()
-print("lista 3 ordenada")
-lista_3.imprimir()

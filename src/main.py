@@ -1,12 +1,36 @@
 # This file is for testing all the exercices!
 # Here are all the proposed cases.
+import random
 from point_four.Pilas import Pila
 from commons import separator_string, cases_string
-from point_five.Stack import Stack
 from point_five.Queue import Queue
 from point_five.Stack_with_queue import Stack_with_Queue
+from point_one.Lists import LSL
 
 
+
+separator_string("First exercise")
+
+lista_1 = LSL()
+lista_2 = LSL()
+lista_3 = LSL()
+
+for valor in range (0, 20):
+    lista_1.insertar(random.randint(1, 50))
+    lista_2.insertar(random.randint(1, 50))
+
+lista_3 = lista_1.concatenar_listas(lista_2)
+
+cases_string("lista 1")
+lista_1.imprimir()
+cases_string("lista 2")
+lista_2.imprimir()
+cases_string("lista 3")
+lista_3.imprimir()
+
+lista_3.ordenar()
+cases_string("lista 3 ordenada")
+lista_3.imprimir()
 
 # Prueba 1:
 # Lista = [2, 7, 9, 5, 7, 5]
