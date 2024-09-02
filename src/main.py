@@ -110,11 +110,27 @@ Lista.mostrar()
 separator_string('Fourth exercise')
 pila = Pila(6)
 lista = [2, 7, 9, 5, 7, 5]
+cases_string(lista)
 pila.ApilarLista(lista)
-pila.Mostrar() 
+pila.Mostrar()
 pila.DesapilarLista()
 pila.Mostrar()
 
+lista_dos = [1, 1, 1, 1, 1, 1]
+cases_string(lista_dos)
+pila_dos = Pila(6)
+pila_dos.ApilarLista(lista_dos)
+pila_dos.Mostrar()
+pila_dos.DesapilarLista()
+pila_dos.Mostrar()
+
+lista_tres = [5, 5, 7, 7, 1, 1]
+cases_string(lista_tres)
+pila_tres = Pila(6)
+pila_tres.ApilarLista(lista_tres)
+pila_tres.Mostrar()
+pila_tres.DesapilarLista()
+pila_tres.Mostrar()
 
 
 separator_string('Fifth  exercise')
