@@ -23,6 +23,11 @@ All the solutions and proposed cases are in "main.py", we unify all the answers 
 The explanations of the codes are in each solution file in the last lines. They are commented.
 
 
+# Running
+
+To see the solutions, just use “py main.py”, this will execute the code and in console you will be able to see the proposed exercises and their solutions.
+
+
 
 For the time being, that's all!
 
