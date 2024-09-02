@@ -18,6 +18,11 @@ The changes you make should be uploaded to your branch, and if you can, make the
 
 # Solutions and testing
 
+All the solutions and proposed cases are in "main.py", we unify all the answers for quick access.
+
+The explanations of the codes are in each solution file in the last lines. They are commented.
+
+
 
 For the time being, that's all!
 
